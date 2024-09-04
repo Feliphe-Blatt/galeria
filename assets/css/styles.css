@@ -1,0 +1,205 @@
+/* Variáveis */
+:root{
+    --estilo-fonte-padrao: 'Roboto', sans-serif;
+    --estilo-fonte-titulo: 'Montserrat', sans-serif;
+
+    --cor-padrao: #25282E;
+    --cor-secundaria: #555;
+    --cor-btn-padrao: #fff;
+    --cor-btn-secundaria: #333;
+    --cor-link-menu: #444;
+    --cor-link-menu-hover: #C1B696;
+
+    --transicao-padrao: all 200ms ease-in-out;
+
+    --filter-icone-padrao: drop-shadow(0rem 0rem .2rem rgba(0, 0, 0, .4));
+    --filter-icone-padrao-expand: drop-shadow(.1rem .1rem .1rem rgba(0, 0, 0, .2));
+
+    --shadow-box-padrao: 0rem 0rem 1rem .2rem rgba(0, 0, 0, 0.2);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ScrollBar */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, .3);
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Geral */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+* {
+    color: var(--cor-padrao);
+}
+
+body {
+    overflow-y: auto;
+    height: 100dvh;
+    font-family: var(--estilo-fonte-padrao);
+}
+.nav-item a, .navbar-brand p {
+    font-family: var(--estilo-fonte-titulo);
+}
+
+a, i {
+    transition: var(--transicao-padrao);
+    text-decoration: none;
+}
+
+.secondary-color {
+    color: var(--cor-secundaria);
+}
+
+.centralizar-imagem {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.btn {
+    border-radius: 0;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: var(--cor-btn-padrao);
+    background-color: var(--cor-padrao);
+    transition: var(--transicao-padrao);
+}
+
+.btn:hover {
+    background-color: var(--cor-btn-secundaria);
+    color: var(--cor-btn-padrao);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Cabeçalho */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+#cabecalho {
+    border-bottom: .1rem solid #CCC;
+}
+
+#inicio {
+    width: fit-content;
+    margin-left: 0;
+}
+.container-logo {
+    width: fit-content;
+    margin: 0 auto;
+}
+.container-logo:hover {
+    filter: var(--filter-icone-padrao-expand);
+}
+.bi-camera {
+    font-size: 40px;
+    margin-right: .6rem;
+    filter: var(--filter-icone-padrao);
+}
+#cabecalho p {
+    margin-bottom: 0;
+}
+
+/* NavBar */
+.nav-item {
+    margin: .5rem 0;
+}
+.nav-item a {
+    width: fit-content;
+    color: var(--cor-link-menu);
+}
+.nav-item a:hover {
+    color: var(--cor-link-menu-hover);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Main */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+main {
+    padding: 2rem 0;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.main-image {
+    height: 400px;
+    box-shadow: var(--shadow-box-padrao);
+    background-position-y: 30%;
+    margin-bottom: 30px;
+    position: relative;
+    border-radius: 1rem 0 1rem 1rem;
+}
+
+.main-image-info {
+    padding: 1rem;
+    max-width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0 0 0 1rem;
+    box-shadow: var(--shadow-box-padrao);
+}
+
+#btn-artisticas {
+    position: absolute;
+    right: -10px;
+    bottom: 1rem;
+    border: solid 1px var(--cor-link-menu-hover);
+    box-shadow: var(--shadow-box-padrao);
+}
+
+#imagem-artistica {
+    background-image: url(../media/jpeg/photo-4.jpeg);
+}
+#imagem-paisagem {
+    background-image: url(../media/jpeg/photo-20.jpeg);
+}
+#imagem-sobre {
+    background-image: url(../media/jpeg/photo-1.jpeg);
+}
+#imagem-profile {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    max-height: 50%;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-box-padrao);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Rodapé */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+footer {
+    padding: 1rem;
+    border-top: .1rem solid #CCC;
+}
+
+footer i {
+    font-size: 2rem;
+}
+footer i:hover {
+    color: var(--cor-link-menu-hover);
+    filter: var(--filter-icone-padrao-expand);
+}
+
+#social-icons-container {
+    padding: 1rem;
+}
+
+footer p i {
+    color: rgba(160, 0, 0, 1);
+    font-size: 1rem;
+}
+
+#copy {
+    margin-bottom: 0;
+}
