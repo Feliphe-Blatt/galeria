@@ -1,66 +1,35 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const conteudo = document.getElementById('conteudo');
+document.addEventListener( 'DOMContentLoaded', function () {
+  new Splide( '#image-carousel' ).mount();
+} );
 
-  // Funnções responsáveis por carregar páginas dinamicamente
-  function carregarPagina(url) {
-    fetch(url)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Erro ao carregar a página: ' + response.status);
-        }
-        return response.text();
-      })
-      .then(html => {
-        conteudo.innerHTML = html;
-      })
-      .catch(error => {
-        conteudo.innerHTML = `<p>Desculpe, ocorreu um erro ao carregar o conteúdo: ${error.message}</p>`;
-      });
-  }
+var splide = new Splide( '#main-carousel', {
+  pagination: false,
+} );
 
-  function carregarInicio() {
-    carregarPagina('./src/home.html');
-  }
+var thumbnails = document.getElementsByClassName( 'thumbnail' );
+var current;
 
-  function carregarArtisticas() {
-    carregarPagina('./src/artisticas.html');
-  }
+for ( var i = 0; i < thumbnails.length; i++ ) {
+  initThumbnail( thumbnails[ i ], i );
+}
 
-  function carregarPaisagens() {
-    carregarPagina('./src/paisagens.html');
-  }
+function initThumbnail( thumbnail, index ) {
+  thumbnail.addEventListener( 'click', function () {
+    splide.go( index );
+  } );
+}
 
-  function carregarSobre() {
-    carregarPagina('./src/sobre.html');
-  }
+splide.on( 'mounted move', function () {
+  var thumbnail = thumbnails[ splide.index ];
 
-  carregarInicio();
-
-  // Função para lidar com click's normais
-  function adicionarEventoDeClique(idElemento, funcaoDeCarregamento) {
-    const elemento = document.getElementById(idElemento);
-    if (elemento) {
-      elemento.addEventListener('click', function (event) {
-        funcaoDeCarregamento();
-      });
+  if ( thumbnail ) {
+    if ( current ) {
+      current.classList.remove( 'is-active' );
     }
+
+    thumbnail.classList.add( 'is-active' );
+    current = thumbnail;
   }
+} );
 
-  adicionarEventoDeClique('link-home', carregarInicio);
-  adicionarEventoDeClique('link-artisticas', carregarArtisticas);
-  adicionarEventoDeClique('link-paisagens', carregarPaisagens);
-  adicionarEventoDeClique('link-sobre', carregarSobre);
-
-  
-  // Listener para lidar com cliques de conteúdos dinamicamente adicionados
-  document.body.addEventListener('click', function (event) {
-    const id = event.target.id;
-    if (id === 'main-btn-artistica') {
-      carregarArtisticas();
-    } else if (id === 'main-btn-paisagem') {
-      carregarPaisagens();
-    } else if (id === 'main-btn-profile') {
-      carregarSobre();
-    }
-  });
-});
+splide.mount();

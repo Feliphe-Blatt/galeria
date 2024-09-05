@@ -4,9 +4,6 @@
   --estilo-fonte-titulo: 'Montserrat', sans-serif;
 
   /* Peso de Fonte */
-  --destaque-maximo: 900;
-  --destaque-alto: 800;
-  --destaque-medio: 650;
   --destaque-normal: 550;
 
   --cor-padrao: #25282E;
@@ -202,6 +199,37 @@ main {
   box-shadow: var(--shadow-box-padrao);
 }
 
+.splide__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbnails {
+  display: flex;
+  margin: 1rem auto 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.thumbnail {
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  list-style: none;
+  margin: 0 0.2rem;
+  cursor: pointer;
+  opacity: 0.3;
+}
+
+.thumbnail.is-active {
+  opacity: 1;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+}
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* Rodapé */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -231,3 +259,4 @@ footer p i {
 #copy {
   margin-bottom: 0;
 }
+
