@@ -12,6 +12,7 @@
   --cor-btn-secundaria: #333;
   --cor-link-menu: #444;
   --cor-link-menu-hover: #C1B696;
+  --cor-link-menu-hover-alt: #816f4e;
 
   --transicao-padrao: all 200ms ease-in-out;
 
@@ -19,6 +20,7 @@
   --filter-icone-padrao-expand: drop-shadow(.1rem .1rem .1rem rgba(0, 0, 0, .2));
 
   --shadow-box-padrao: 0rem 0rem 1rem .2rem rgba(0, 0, 0, 0.2);
+  --shadow-box-imagem: 0rem 0rem 1rem .3rem rgba(0, 0, 0, 0.2);
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -59,6 +61,11 @@ body {
 .navbar-brand p {
   font-family: var(--estilo-fonte-titulo);
   font-weight: var(--destaque-normal);
+}
+
+.navbar-collapse {
+  
+  transition: var(--transicao-padrao);
 }
 
 a,
@@ -131,6 +138,7 @@ i {
 .nav-item a {
   width: fit-content;
   color: var(--cor-link-menu);
+  transition: var(--transicao-padrao);
 }
 
 .nav-item a:hover {
@@ -199,20 +207,57 @@ main {
   box-shadow: var(--shadow-box-padrao);
 }
 
+.splide__track {
+  border-radius: 1rem;
+  box-shadow: var(--shadow-box-imagem);
+  background-color: transparent;
+}
+
+.splide__arrow {
+  transition: var(--transicao-padrao);
+  background-color: var(--cor-link-menu-hover);
+  opacity: .5;
+}
+
+.splide__slide {
+  box-shadow: var(--shadow-box-imagem);
+  border-radius: 1rem;
+}
+
 .splide__slide img {
   width: 100%;
   height: 100%;
+  max-height: 70dvh;
   object-fit: cover;
+  border-radius: 1rem;
+  background-color: transparent;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+}
+.splide__pagination__page {
+  border: solid 1px rgba(0, 0, 0, .3);
+  opacity: 1;
+  background-color: var(--cor-link-menu-hover-alt);
+}
+
+.splide__pagination__page.is-active {
+  border: solid 1px rgba(0, 0, 0, .5);
+  opacity: 1;
+  background-color: var(--cor-link-menu-hover);
 }
 
 .thumbnails {
+  transition: var(--transicao-padrao);
   display: flex;
+  flex-wrap: wrap;
   margin: 1rem auto 0;
-  padding: 0;
+  padding: 0 0 1rem;
   justify-content: center;
 }
 
+
+
 .thumbnail {
+  transition: var(--transicao-padrao);
   width: 70px;
   height: 70px;
   overflow: hidden;
@@ -229,6 +274,8 @@ main {
 .thumbnail img {
   width: 100%;
   height: 100%;
+  border: solid 1px rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
 }
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* Rodapé */
@@ -248,7 +295,11 @@ footer i:hover {
 }
 
 #social-icons-container {
-  padding: 1rem;
+  padding: .5rem;
+}
+
+footer p {
+  margin-bottom: 0;
 }
 
 footer p i {

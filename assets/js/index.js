@@ -4,6 +4,14 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
 var splide = new Splide( '#main-carousel', {
   pagination: false,
+  type: 'loop',
+  label: 'Galeria de fotos artísticas',
+  width: 650,
+  perPage: 1,
+  pagination: true,
+  keyboard: 'global',
+  wheel: true,
+
 } );
 
 var thumbnails = document.getElementsByClassName( 'thumbnail' );
