@@ -2,6 +2,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
   new Splide( '#image-carousel' ).mount();
 } );
 
+
 var splide = new Splide( '#main-carousel', {
   pagination: false,
   type: 'loop',
