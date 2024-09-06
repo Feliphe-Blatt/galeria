@@ -5,7 +5,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 var splide = new Splide( '#main-carousel', {
   pagination: false,
   type: 'loop',
-  label: 'Galeria de fotos artísticas',
+  label: 'Galeria de fotos',
   width: 650,
   perPage: 1,
   pagination: true,
