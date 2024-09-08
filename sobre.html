@@ -11,7 +11,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <!-- Splide -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" integrity="sha256-5uKiXEwbaQh9cgd2/5Vp6WmMnsUr3VZZw0a8rKnOKNU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    integrity="sha256-5uKiXEwbaQh9cgd2/5Vp6WmMnsUr3VZZw0a8rKnOKNU=" crossorigin="anonymous">
   <!-- Estilo normal -->
   <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
@@ -59,14 +60,30 @@
   </header>
 
   <!-- Main -->
-  <main class="container-fluid d-flex flex-column justify-content-between">
-    
-    
-    <div class="container text-center d-flex flex-column align-items-center">
-      PlaceHolder para página 'Sobre'
-      <img style="width: 300px;" src="./assets/media/photo-profile.jpeg" alt="Alô">
-    </div>
+  <main class="container-fluid d-flex flex-column justify-content-center">
+    <div class="container d-flex flex-column align-items-center">
 
+      <!-- Sobre o autor -->
+      <h2 class="primary-color">Sobre o autor</h2>
+
+      <p class="secondary-color">
+        Me chamo Feliphe Blatt, sou estudante de Sistemas para internet, gamer, apaixonado por fotografia e música.
+      </p>
+
+      <img id="foto-sobre" src="./assets/media/photo-profile.jpeg" title="Foto de Feliphe Blatt" alt="Foto de Feliphe Blatt">
+      
+      <!-- Sobre o projeto -->
+      <h1 class="primary-color p-3">Sobre o projeto galeria</h1>
+      <p class="secondary-color">
+        Enquanto faço estudos no desenvolvimento web, decidi criar uma galeria de arte para compartilhar minhas fotos.
+        <br>
+        Todas as fotos são de minha autoria e foram tiradas com muito carinho e dedicação no celular, com técnicas reais
+        de fotografia.
+        <br>
+        <br>
+        <strong>Espero que gostem!</strong>
+      </p>
+    </div>
     <!-- Rodapé -->
     <footer class="container">
       <p class="secondary-color">
@@ -74,28 +91,32 @@
       </p>
       <div class="row justify-content-evenly" id="social-icons-container">
         <div class="col-1">
-          <a target="_blank" href="https://www.instagram.com/blattfeliphe/" aria-label="Instagram"><i
-              class="bi bi-instagram secondary-color"></i></a>
+          <a target="_blank" href="https://www.instagram.com/blattfeliphe/" aria-label="Instagram" title="Instagram">
+            <i class="bi bi-instagram secondary-color"></i>
+          </a>
         </div>
         <div class="col-1">
-          <a target="_blank" href="https://github.com/Feliphe-Blatt" aria-label="Github"><i
-              class="bi bi-github secondary-color"></i></a>
+          <a target="_blank" href="https://github.com/Feliphe-Blatt" aria-label="Github" title="Github">
+            <i class="bi bi-github secondary-color"></i>
+          </a>
         </div>
         <div class="col-1">
           <a target="_blank"
             href="https://api.whatsapp.com/send?phone=5583981858594&text=Oi%20Feliphe%2C%20vim%20pela%20sua%20Galeria!"
-            aria-label="Whatsapp"><i class="bi bi-whatsapp secondary-color"></i></a>
+            aria-label="Whatsapp" title="Whatsapp">
+            <i class="bi bi-whatsapp secondary-color"></i>
+          </a>
         </div>
       </div>
       <p id="copy" class="secondary-color text-center">
         Galeria de Arte feita com <i class="bi bi-heart-fill"></i> por Feliphe B. &copy; 2024
       </p>
-
     </footer>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" integrity="sha256-FZsW7H2V5X9TGinSjjwYJ419Xka27I8XPDmWryGlWtw=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"
+    integrity="sha256-FZsW7H2V5X9TGinSjjwYJ419Xka27I8XPDmWryGlWtw=" crossorigin="anonymous"></script>
   <script src="./assets/js/index.js"></script>
 </body>
 
